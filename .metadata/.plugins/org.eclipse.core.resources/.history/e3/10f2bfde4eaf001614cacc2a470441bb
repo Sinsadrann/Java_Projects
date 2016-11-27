@@ -1,0 +1,34 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.PrintWriter;
+
+
+public class Pliki
+{
+  public static void main(String[] args)throws FileNotFoundException
+  {
+	  String nazwawej;
+	  Scanner nazwa = new Scanner(System.in);//zjebane to wczytywanie
+	  nazwawej = nazwa.nextLine();
+	  
+	  odczyt(nazwawej);
+      
+  }
+public static void odczyt(String filename)throws FileNotFoundException
+{
+    File file = new File(filename);
+    Scanner in = new Scanner(file);
+
+    String zdanie = in.nextLine();//odczytuje linie 
+    System.out.println(zdanie);
+}
+  
+  
+  public static void zapis (String a) throws FileNotFoundException
+  {
+      PrintWriter zapis = new PrintWriter("ala.txt");
+      zapis.println("Ala ma kota, a kot ma Alê");
+      zapis.close();
+  }
+}

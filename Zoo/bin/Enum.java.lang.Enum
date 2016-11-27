@@ -1,0 +1,4 @@
+public enum Rodzaje
+{
+Gad,Ptak,Ryba,Ssak;
+}

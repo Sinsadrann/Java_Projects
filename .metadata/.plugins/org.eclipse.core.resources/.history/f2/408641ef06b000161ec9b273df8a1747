@@ -1,0 +1,28 @@
+import java.util.Locale;
+import java.util.Scanner;
+import java.io.File;
+
+public class calkowanie {
+	
+	public static void main(String[] args) 
+	{
+		double A;
+		double B;
+		int krok;
+		double calka = 0;
+	
+		  Scanner przedzial = new Scanner(System.in);//zjebane to wczytywanie
+		  przedzial.useLocale(Locale.US);
+		  A = przedzial.nextDouble();
+		  B = przedzial.nextDouble();
+		  krok = przedzial.nextInt();
+	
+	funkcja F = new funkcja();
+	
+	for(double i = A ;i <= B; i+=krok)
+	{
+		calka += F.returnValue(i);
+	}
+		System.out.println(calka);
+}
+}

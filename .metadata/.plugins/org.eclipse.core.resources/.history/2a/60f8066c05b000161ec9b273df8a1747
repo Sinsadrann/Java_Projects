@@ -1,0 +1,9 @@
+
+public class funkcja 
+{
+public
+double returnValue(double x)
+{
+	return (Math.sqrt(3987)*x + Math.pow(3.14,5)/34.5423);
+}
+}

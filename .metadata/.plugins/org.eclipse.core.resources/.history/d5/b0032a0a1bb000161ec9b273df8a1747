@@ -1,0 +1,9 @@
+
+public class funkcja 
+{
+public
+double returnValue(double x)
+{
+	return (Math.pow(x, 33.4) * Math.sqrt(x)) ;
+}
+}

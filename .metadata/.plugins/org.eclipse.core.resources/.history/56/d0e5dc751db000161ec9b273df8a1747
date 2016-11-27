@@ -1,0 +1,33 @@
+import java.util.Locale;
+import java.util.Scanner;
+import java.io.File;
+
+public class calkowanie {
+	
+	public static void main(String[] args) 
+	{
+		double A;
+		double B;
+		int ileKrokow;
+		double krok;
+		double calka = 0;
+	
+		  Scanner przedzial = new Scanner(System.in);//zjebane to wczytywanie
+		  przedzial.useLocale(Locale.US);
+		  A = przedzial.nextDouble();
+		  B = przedzial.nextDouble();
+		  ileKrokow = przedzial.nextInt();
+		  
+	
+	funkcja F = new funkcja();
+	
+	krok = (B - A)/ileKrokow;
+	
+	for(int i = 0; i < ileKrokow; i++)
+	{
+		calka += F.returnValue(A +(i * krok))*krok;
+		//System.out.println(F.returnValue(A + i*krok));
+	}
+		System.out.println(calka);
+}
+}

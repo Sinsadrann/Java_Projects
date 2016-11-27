@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class calkowanie {
+	
+	public static void main(String[] args) 
+	{
+		
+		double function = (Math.sqrt(3987) + Math.pow(3.14,5)/34.5423);
+		double A;
+		double B;
+	
+		  Scanner przedzial = new Scanner(System.in);//zjebane to wczytywanie
+		  A = przedzial.nextDouble();
+		  B = przedzial.nextDouble();
+		  
+		  System.out.println(A);
+		  System.out.println(" ");
+		  System.out.println(B);
+	}
+
+}

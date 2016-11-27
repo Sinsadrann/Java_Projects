@@ -1,0 +1,9 @@
+
+public class funkcja 
+{
+public
+double returnValue(double x)
+{
+	return (1/(Math.pow((11 + 5*x), 3)));
+}
+}
