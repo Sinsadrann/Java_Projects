@@ -13,12 +13,15 @@ public class Okno extends JFrame {
 		super("Hello World");//konstruktor nad klasy
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//zeby wylaczalo sie krzyzykiem
 		setLayout(new GridLayout(3,3)); 
-		Przycisk[] plansza = new Przycisk[9];
-		for(int i = 0; i < 9; i++)
+		plansza Plansza = new plansza();
+		for(int i = 0; i < 3; i++)
 		{
-			plansza[i] = new Przycisk();
-			//plansza[i].setIcon(new ImageIcon(getClass().getResource("images/kolo.jpg")));
-			add(plansza[i]);
+			for(int j =0; j < 3; j++)
+			{
+				Plansza.plansza[i][j] = new Przycisk();
+				//plansza[i].setIcon(new ImageIcon(getClass().getResource("images/kolo.jpg")));
+				add(Plansza.plansza[i][j]);
+			}
 		}
 		setLocation(600,300);
 		setSize(600,600);
