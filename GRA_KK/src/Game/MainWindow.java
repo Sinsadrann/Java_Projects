@@ -17,6 +17,8 @@ import Game.Board;
 public class MainWindow extends JFrame implements ActionListener 
 {
 	Board board;
+	BoardImpl Iboard;
+	int v,c;
 	public MainWindow()
 	{
 		super("Kó³ko-krzy¿yk");//konstruktor nad klasy
@@ -38,6 +40,13 @@ public class MainWindow extends JFrame implements ActionListener
 		setSize(600,600);
 		setResizable(false);//nie mozna rozszezyc
 		setVisible(true);
+		
+		Iboard = new BoardImpl();
+	}
+	
+	public BoardImpl getIboard()
+	{
+		return this.Iboard;
 	}
 	
 	@Override
@@ -50,9 +59,12 @@ public class MainWindow extends JFrame implements ActionListener
 			{
 				if(source == (JButton)board.fields[i][j])
 				{
-				board.fields[i][j].setIcon(new ImageIcon(getClass().getResource("images/cross.jpg")));
-				board.fields[i][j].setText("KUPA");
-				System.out.println("KUPA");
+					this.v = i;
+					this.c = j;
+				if(Iboard.drawFigure(i,j,Game.OBJECTS.CIRCLE,Game.OBJECTS.CROSS) == true)
+				{
+					board.fields[i][j].setIcon(new ImageIcon(getClass().getResource("images/cross.jpg")));
+				}
 				}			
 			}
 		}
